@@ -1,0 +1,20 @@
+#include <iostream>
+#include<memory>
+using namespace std;
+
+
+
+int main() {
+	//Unique Pointers
+	unique_ptr<int>x(new int);
+	auto y = make_unique<int>();
+	auto numbers = make_unique<int[]>(10);
+
+	//Shared Pointers
+	shared_ptr<int>a = make_shared<int>();
+	*a = 10;
+	shared_ptr<int>b(a);
+	//a=b, point to the same location
+
+	return 0;
+}
